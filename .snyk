@@ -1,0 +1,15 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.25.0
+ignore:
+  SNYK-JS-MARSDB-480405:
+    - '*':
+        reason: 'Legacy in-memory database with no upstream fix; risk accepted for lab/testing environment only'
+        expires: 2027-12-31T00:00:00.000Z
+  npm:moment:20170905:
+    - '*':
+        reason: 'Transitive dev-only dependency; not exposed to external user input'
+        expires: 2027-12-31T00:00:00.000Z
+  SNYK-JS-HBS-1566555:
+    - '*':
+        reason: 'Template engine used internally for static error views only'
+        expires: 2027-12-31T00:00:00.000Z
